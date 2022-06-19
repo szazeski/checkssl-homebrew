@@ -1,9 +1,11 @@
 # homebrew-tap
 
-This is the repo that handles the homebrew tap for checkssl.
-
-`brew install szazeski/checkssl`
-
-Homebrew should automatically find the tap, but if not, you can add it manually with:
+To enable the ability to install projects from this tap:
 
 `brew tap szazeski/tap`
+
+
+To install `checkssl`:
+
+`brew install szazeski/tap/checkssl`
+
