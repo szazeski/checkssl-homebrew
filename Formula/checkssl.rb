@@ -51,6 +51,5 @@ class Checkssl < Formula
 
   test do
     system "#{bin}/checkssl checkssl.org"
-    ...
   end
 end
