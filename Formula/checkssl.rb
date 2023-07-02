@@ -5,21 +5,21 @@
 class Checkssl < Formula
   desc "Simple tool to check or monitor TLS/SSL certificates are working."
   homepage "https://www.checkssl.org/"
-  version "0.4.4"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.4.4/checkssl_0.4.4_Darwin_arm64.tar.gz"
-      sha256 "670633523982f80f6e7422fe1b18d0c386e2cb50f1f3518977decdfb88d9cb50"
+      url "https://github.com/szazeski/checkssl/releases/download/v0.5.0/checkssl_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "9b763646d06441ee553d2aaf7d10f0b2b6de5372c998a73b30bd484fb7705a2b"
 
       def install
         bin.install "checkssl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.4.4/checkssl_0.4.4_Darwin_x86_64.tar.gz"
-      sha256 "5dd54c8fb984d4caefde84ca1e832987a1e4db1ad3111590efb3931d88a99776"
+      url "https://github.com/szazeski/checkssl/releases/download/v0.5.0/checkssl_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "be3611639e732ae285a10375f160ae778e05f836c0546bd9dcc5dcaea3764dbe"
 
       def install
         bin.install "checkssl"
@@ -29,16 +29,16 @@ class Checkssl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.4.4/checkssl_0.4.4_Linux_arm64.tar.gz"
-      sha256 "ef9c112e527b1740a02ba9d66f9e114be2c4cd7d1e61e7672962e080b448e2ae"
+      url "https://github.com/szazeski/checkssl/releases/download/v0.5.0/checkssl_0.5.0_Linux_arm64.tar.gz"
+      sha256 "3fe6d73d93b94268a62616520cb9ef498e1cbccc482a10b7bab028a1dff54a78"
 
       def install
         bin.install "checkssl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.4.4/checkssl_0.4.4_Linux_x86_64.tar.gz"
-      sha256 "800f38d783709ecbf71e19b48736f2401731e81c59b03b824724eb28eea209b9"
+      url "https://github.com/szazeski/checkssl/releases/download/v0.5.0/checkssl_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "195ebe60be84053fd912d1d67751ae96b1307a2f2cc5f33905a90a6fb2a17579"
 
       def install
         bin.install "checkssl"
