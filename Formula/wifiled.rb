@@ -5,21 +5,21 @@
 class Wifiled < Formula
   desc "Simple tool to control generic wifi led controllers via command line."
   homepage "https://www.wifiled.org/"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.3.0/wifiled_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "d663b0c8feb4bc4d9fb63f3d9008152d83f1aef7e0f15e09a3417ca4b136b507"
+      url "https://github.com/szazeski/wifiled/releases/download/v0.4.0/wifiled_Darwin_arm64.tar.gz"
+      sha256 "deb8db7acb84d32b641c869087ec9871522dbba281ca5523baaf4a6641193fe1"
 
       def install
         bin.install "wifiled"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.3.0/wifiled_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "b5804b52b0ffc24ea4f5005d08383b4b7008a0d3fb446387c279bbc0694e84bd"
+      url "https://github.com/szazeski/wifiled/releases/download/v0.4.0/wifiled_Darwin_x86_64.tar.gz"
+      sha256 "7794b0f1b0424f60a68246c9148205789a818429799f58bea1c2e67f7f917385"
 
       def install
         bin.install "wifiled"
@@ -29,16 +29,16 @@ class Wifiled < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.3.0/wifiled_0.3.0_Linux_arm64.tar.gz"
-      sha256 "db36452503826a0217e32b7561c499350cbb4640f550047054ae44cc25f8d33b"
+      url "https://github.com/szazeski/wifiled/releases/download/v0.4.0/wifiled_Linux_arm64.tar.gz"
+      sha256 "b429bac818f6396c507ecd98c93b2b24d074b089423b4986898f78a55c4b41de"
 
       def install
         bin.install "wifiled"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.3.0/wifiled_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "87f60b6d6a81f4c2b5a74ad1bbe235bc31ee876996b36c088f74e005a01b0189"
+      url "https://github.com/szazeski/wifiled/releases/download/v0.4.0/wifiled_Linux_x86_64.tar.gz"
+      sha256 "5eb6c8f74a8b71dbeb067b5044c568488ab20a702ac9e401c644ccf5e1f68f2c"
 
       def install
         bin.install "wifiled"
