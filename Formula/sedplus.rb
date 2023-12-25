@@ -9,17 +9,17 @@ class Sedplus < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0Darwin_arm64.tar.gz"
-      sha256 "08131486f2cb1202fb765ae6fe29da1c523f856c1cebcfa53a22c3f69afafc0b"
+    if Hardware::CPU.intel?
+      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "a367e9f9b2dc860982d123c9eca3dade805c8eaa06b9f6dedf8a5e19f879e360"
 
       def install
         bin.install "sedplus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0Darwin_x86_64.tar.gz"
-      sha256 "4fa3a2831d5261c43e7e36e829f7e06150855ebfbf9e6528ef9f8f063307beea"
+    if Hardware::CPU.arm?
+      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "42b12a424aaf9f86dd39c46679b50f9fe5c3b81a244f7bc07036bbe8e6eaa3f0"
 
       def install
         bin.install "sedplus"
@@ -29,16 +29,16 @@ class Sedplus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0Linux_arm64.tar.gz"
-      sha256 "4d12738758e5c12ad29314c598e8e12ece21596d6d425cdb93c149f3c8486840"
+      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0_Linux_arm64.tar.gz"
+      sha256 "9673aaaf0775f86f4b8673ab0b95896b1aca2b28657d5aa23201a84fcc223ec4"
 
       def install
         bin.install "sedplus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0Linux_x86_64.tar.gz"
-      sha256 "a429ddd77052b335c1d307aea86fd982b143e42b6d79c9a662260ad5015fcc76"
+      url "https://github.com/szazeski/sedplus/releases/download/v0.1.0/sedplus_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "d55ac20ef7979a88368e82eab07b5ab01865da02e50123a837edd37aef2d2731"
 
       def install
         bin.install "sedplus"
