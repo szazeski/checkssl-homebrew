@@ -5,21 +5,21 @@
 class Checkfreespace < Formula
   desc "Simple tool to check free space on a drive."
   homepage "https://checkcli.com/checkfreespace/"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.2/checkfreespace_1.0.2_Darwin_arm64.tar.gz"
-      sha256 "a6718bf2197f75b27d6c7a596f2c366f456f38fa227cd67e1cac6a64dfbacea6"
+      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.3/checkfreespace_1.0.3_Darwin_arm64.tar.gz"
+      sha256 "53349479c0b1cbc474f87fc7682ba266994a86e9ee16b9fff3a3935722612e5a"
 
       def install
         bin.install "checkfreespace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.2/checkfreespace_1.0.2_Darwin_x86_64.tar.gz"
-      sha256 "cd241de87420784a8c34dec512c70e3a370fa010ea0d58d5a4889f079881b68b"
+      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.3/checkfreespace_1.0.3_Darwin_x86_64.tar.gz"
+      sha256 "23622c0e43ab8b82bf06718fa11d52bc50e4d580d10ab39b857241509bd4120c"
 
       def install
         bin.install "checkfreespace"
@@ -29,16 +29,16 @@ class Checkfreespace < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.2/checkfreespace_1.0.2_Linux_arm64.tar.gz"
-      sha256 "ce62e803b1d53c2bca6684bcd61d3f8a4ae60aae33f06c3b2c9124dfd4f897e8"
+      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.3/checkfreespace_1.0.3_Linux_arm64.tar.gz"
+      sha256 "ad268312527e3375b8e2054d16bd4cdc564bda5d3a4c1da6408df02595d547cf"
 
       def install
         bin.install "checkfreespace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.2/checkfreespace_1.0.2_Linux_x86_64.tar.gz"
-      sha256 "3d9c046732f2695bb7d744cf8ef263bcf47df8362c847120d1c845c0ebfc6b93"
+      url "https://github.com/szazeski/checkfreespace/releases/download/v1.0.3/checkfreespace_1.0.3_Linux_x86_64.tar.gz"
+      sha256 "0da9fd51dfcf52dcad47803e4d3607e416c10f8b075661a601e8de48a102b97f"
 
       def install
         bin.install "checkfreespace"
