@@ -5,21 +5,21 @@
 class Checkssl < Formula
   desc "Simple tool to check or monitor TLS/SSL certificates are working."
   homepage "https://www.checkssl.org/"
-  version "0.5.1"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.5.1/checkssl_Darwin_x86_64.tar.gz"
-      sha256 "74620240ce26c6b3f5101493b3086ebfbe36da907f39f27055d5f0dc8f8fda06"
+    on_intel do
+      url "https://github.com/szazeski/checkssl/releases/download/v0.6.0/checkssl_Darwin_x86_64.tar.gz"
+      sha256 "2fb5f08a644c0dd5efadcb090ce262fc4809e94c791201d5bdf514d09fb015fd"
 
       def install
         bin.install "checkssl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.5.1/checkssl_Darwin_arm64.tar.gz"
-      sha256 "1794a615b5905824b1396ca1ad1d1ec5a8d4134e736950a9cecd4dc5e5171d38"
+    on_arm do
+      url "https://github.com/szazeski/checkssl/releases/download/v0.6.0/checkssl_Darwin_arm64.tar.gz"
+      sha256 "6f1853ebdffb490afb576a5ef583172dc3cc17b94eca625bdefa0d1f6a57c010"
 
       def install
         bin.install "checkssl"
@@ -28,20 +28,24 @@ class Checkssl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.5.1/checkssl_Linux_x86_64.tar.gz"
-      sha256 "aff91a523780da6e52f60fefc5d76e4e60a9ede7c553e2ad4a306d87ee129cb3"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/szazeski/checkssl/releases/download/v0.6.0/checkssl_Linux_x86_64.tar.gz"
+        sha256 "b01524cee78ba12826a65f464dce668e45196e0632bedefafa5bfc0579689f69"
 
-      def install
-        bin.install "checkssl"
+        def install
+          bin.install "checkssl"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szazeski/checkssl/releases/download/v0.5.1/checkssl_Linux_arm64.tar.gz"
-      sha256 "970b8805018a72e55ffaa2e686e3e150f68c3d24e00f895eb9bf33721e0b049d"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/szazeski/checkssl/releases/download/v0.6.0/checkssl_Linux_arm64.tar.gz"
+        sha256 "ed1590c9aa76796c5d44304190c3176725e704545e8bd103299e512792b2af5f"
 
-      def install
-        bin.install "checkssl"
+        def install
+          bin.install "checkssl"
+        end
       end
     end
   end
