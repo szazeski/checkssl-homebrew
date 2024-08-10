@@ -5,21 +5,21 @@
 class Wifiled < Formula
   desc "Simple tool to control generic wifi led controllers via command line."
   homepage "https://www.wifiled.org/"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Darwin_x86_64.tar.gz"
-      sha256 "3b9edd7f2a4228fa04b0542f99af9f8d0628045827b42b5720b35cbdd4e34300"
+      url "https://github.com/szazeski/wifiled/releases/download/v0.5.1/wifiled_Darwin_x86_64.tar.gz"
+      sha256 "8ce58d67709f3550531522976590cd3eca71e402c368481ab54febe85946539a"
 
       def install
         bin.install "wifiled"
       end
     end
     on_arm do
-      url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Darwin_arm64.tar.gz"
-      sha256 "2a991532e167cb9c318ad242cf2a2dfa773f3ed443e3994cc94324ab500174a3"
+      url "https://github.com/szazeski/wifiled/releases/download/v0.5.1/wifiled_Darwin_arm64.tar.gz"
+      sha256 "73473d8ab318e9df85354f7c5cb37bfb40ae5680c1334afcfee582ded474ed75"
 
       def install
         bin.install "wifiled"
@@ -30,8 +30,8 @@ class Wifiled < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Linux_x86_64.tar.gz"
-        sha256 "080a85a799d9a625498815ffda5127771b4925d9221e36c6b5871ff3bf9538ee"
+        url "https://github.com/szazeski/wifiled/releases/download/v0.5.1/wifiled_Linux_x86_64.tar.gz"
+        sha256 "8a6fd059d1c9531c602e2ba1258031bf9eabdbdf3d84200d2d97a7b57cb6e799"
 
         def install
           bin.install "wifiled"
@@ -40,8 +40,8 @@ class Wifiled < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Linux_arm64.tar.gz"
-        sha256 "1250bf2ec58b04df0566bd2ab7086e75373443503cd4789dcbfe78e3a6ff8c05"
+        url "https://github.com/szazeski/wifiled/releases/download/v0.5.1/wifiled_Linux_arm64.tar.gz"
+        sha256 "be945ec94e2209ce751c895f61f827b47150336770534efdb957ed38b2d8158a"
 
         def install
           bin.install "wifiled"
