@@ -5,21 +5,21 @@
 class Wifiled < Formula
   desc "Simple tool to control generic wifi led controllers via command line."
   homepage "https://www.wifiled.org/"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.4.1/wifiled_Darwin_x86_64.tar.gz"
-      sha256 "808e5efb3a714756941e41fc85be7e9c1239e0e2081894d01a9cf90b6fa0f2ee"
+    on_intel do
+      url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Darwin_x86_64.tar.gz"
+      sha256 "3b9edd7f2a4228fa04b0542f99af9f8d0628045827b42b5720b35cbdd4e34300"
 
       def install
         bin.install "wifiled"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.4.1/wifiled_Darwin_arm64.tar.gz"
-      sha256 "13e1deb10b03c4c9a3dde7eefa16d6a6946461633eebf6addb1a5098990d925e"
+    on_arm do
+      url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Darwin_arm64.tar.gz"
+      sha256 "2a991532e167cb9c318ad242cf2a2dfa773f3ed443e3994cc94324ab500174a3"
 
       def install
         bin.install "wifiled"
@@ -28,20 +28,24 @@ class Wifiled < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.4.1/wifiled_Linux_x86_64.tar.gz"
-      sha256 "7aef9473ef88165301e5160e3d10d1302e0ad65dc790e9002895c9febf86b94a"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Linux_x86_64.tar.gz"
+        sha256 "080a85a799d9a625498815ffda5127771b4925d9221e36c6b5871ff3bf9538ee"
 
-      def install
-        bin.install "wifiled"
+        def install
+          bin.install "wifiled"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szazeski/wifiled/releases/download/v0.4.1/wifiled_Linux_arm64.tar.gz"
-      sha256 "a180bf3a6fe23f3392ec645cd28b964a0c2ea29cf3c019c808c2548ff78a0d7f"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/szazeski/wifiled/releases/download/v0.5.0/wifiled_Linux_arm64.tar.gz"
+        sha256 "1250bf2ec58b04df0566bd2ab7086e75373443503cd4789dcbfe78e3a6ff8c05"
 
-      def install
-        bin.install "wifiled"
+        def install
+          bin.install "wifiled"
+        end
       end
     end
   end
